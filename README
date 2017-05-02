@@ -1,0 +1,2 @@
+For Task2, I chose to use an array of objects, as this is the most modular and simplistic way of implmementing this that I 
+could think of. By doing so, anyone can easily add more data points with limited risk of throwing off the algorithm. 
