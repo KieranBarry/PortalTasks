@@ -7,7 +7,5 @@ var toggleColor = function(event) {
 	}
 };
 
-window.onload = function(e) {
-	document.getElementById('toggle-button').addEventListener('click', toggleColor);
-	document.getElementById('text').style.color = "blue";
-};
+document.getElementById('toggle-button').addEventListener('click', toggleColor);
+document.getElementById('text').style.color = "blue";
