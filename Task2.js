@@ -17,22 +17,20 @@ var allEvents = [interview, lunch, dinner, conference, outside, work, random, co
 
 var checkForConflicts = function(event) {
 	var conflicts = [];
-	console.log("checking");
 	for (var i in allEvents) {
 		for (var j = Number(i)+1; j < allEvents.length; j++) {
-				if ((allEvents[i].startDate < allEvents[j].endDate) && (allEvents[i].endDate > allEvents[j].startDate)) {
-					if (!conflicts.includes(allEvents[i])) {
-						conflicts.push(allEvents[i]);
-					}
-					if (!conflicts.includes(allEvents[j])) {
-						conflicts.push(allEvents[j]);
-					}
+			if ((allEvents[i].startDate < allEvents[j].endDate) && (allEvents[i].endDate > allEvents[j].startDate)) {
+				if (!conflicts.includes(allEvents[i])) {
+					conflicts.push(allEvents[i]);
 				}
-			
+				if (!conflicts.includes(allEvents[j])) {
+					conflicts.push(allEvents[j]);
+				}
+			}
 		}
 	}
 	for (var i in conflicts) {
-		console.log(conflicts[i]);
+		console.log(conflicts[i].name);
 	}
 
 };
