@@ -20,7 +20,6 @@ var checkForConflicts = function(event) {
 	console.log("checking");
 	for (var i in allEvents) {
 		for (var j = Number(i)+1; j < allEvents.length; j++) {
-			if (allEvents[i].startDate.getDate() === allEvents[j].getDate()){
 				if ((allEvents[i].startDate < allEvents[j].endDate) && (allEvents[i].endDate > allEvents[j].startDate)) {
 					if (!conflicts.includes(allEvents[i])) {
 						conflicts.push(allEvents[i]);
@@ -29,7 +28,7 @@ var checkForConflicts = function(event) {
 						conflicts.push(allEvents[j]);
 					}
 				}
-			}
+			
 		}
 	}
 	for (var i in conflicts) {
